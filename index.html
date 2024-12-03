@@ -100,7 +100,7 @@ $$CE=\frac{\Delta Cost}{\Delta \text{health effect}} = \frac{3000}{1000*(2/1000-
 --
 &lt;br&gt;
 
-In the same community, a malaria vaccine campaign, which cost $3000 (including both compain cost and vaccine cost), would reduce the incidence rate of malaria from 5\% to 2.5\%. What is the cost-effectiveness ratio?
+In the same community, a malaria vaccine campaign, which cost $3000 (including both compain cost and vaccine cost), would reduce the incidence rate of malaria from 5% to 2.5%. What is the cost-effectiveness ratio?
 
 $$CE=\frac{\Delta Cost}{\Delta \text{health effect}} = \frac{3000}{1000(5\%-2.5\%)} = \$120 \text{ per averted infection}$$
 ---
@@ -193,17 +193,30 @@ A person with chronic pain would live for another 10 years. He/she will be indif
 ### Future life years should be discounted like the further costs
 
 ---
-# Example of calcuating QALYs
+# Quality-adjusted life **years** (QALYs)
 
-`$$QALYs = Q_{t} * LYs$$`
-`$$\Delta QALYs = Q^i_{t} * LYs^i-Q^0_{t} * LYs^0$$`
-A typical TB patient with has an average quality of life of 0.8 during the illness, and the TB symptoms last 6 months until the patient is fully recovered.
+.pull-left[
+`$$QALY = Q*LYs$$` where Q is .red[Quality of Life] and LY is .red[Life **Years**]
 
-How many QALYs does the patient live during the illness?
+`$$\Delta QALYs = Q_{n}*LYs_{n} - Q_{s}*LYs_{s}$$` where `n` means new drugs and `s` standard treatment
 
-How many QALYs saved per case if TB vaccine could avert the TB?
+A typical TB patient with has an average quality of life of .red[0.8] during the
+illness, and the TB symptoms last .red[6 months] until the patient is fully
+recovered.
 
---
+- How many QALYs does the patient live during the illness?
+
+- How many QALYs saved per case if TB vaccine could avert the TB?
+]
+
+.pull-right[
+### [Poll](https://www.mentimeter.com/app/presentation/alyvr4itr193828iu8whtvjzek7sxywr/wsfn7xkz3ekr/edit)
+
+&lt;image src="libs/pic/qr_code.png" width ="70%" &gt;
+]
+
+---
+# Results 
 
 `\(QALYs_{TB} = 0.8*\frac{6}{12}\)`= 0.4;
 
@@ -214,26 +227,82 @@ QALYs saved = 0.5-0.4 =0.1
 QALYs saved = `\((1-Q)*\text{life years} = (1-0.8)*\frac{6}{12}\)`=0.1
 
 ---
+
 # Disability adjusted life years (DALYs)
 
-### DALYs = disability weight * life years
+### DALYs = disability weight * life years 
 
 [Lanct article](https://www.thelancet.com/action/showPdf?pii=S2214-109X%2815%2900069-8) provide the disability weight for more than 200 conditions. 
 
-Use the similar approach as QALYs to estimate DALYs averted due the intervention. 
+Use the similar approach as QALYs .red[gained] to estimate DALYs .red[averted] due the intervention. 
+
 ---
 # ICER 
 
 `$$ICER = \frac{\Delta Cost}{\Delta \text{QALYs or DALYs}}$$`
 Interpretation:ICER is the .red[price] to pay to gain one year of perfect life
+
+--
+
+Example
+
+`$$ICER = \frac{\Delta Cost}{\Delta \text{QALYs or DALYs}} = \frac{1,000,000}{200} = 5000$$`
+--
+
+&lt;center&gt;
+### It cost .red[$5000] to save .red[one year of life with perfect health]
+
+---
+# A hypothetical example 
+
+A dengue vaccine cost .red[$20] per dose. Full vaccination a child under 9 years old requires 3 doses. The efficiency of the dengue vaccine was estimated to be .red[60%]. The .red[QALYs loss] per dengue infection, on average was estimated to be .red[0.035]. 
+
+The .red[incidence] of dengue in the country was estimated to be .red[2%] among children under 9. Assuming that the treatment cost per dengue case is, on average, .red[$200 per infection]. What is the incremental cost-effectiveness ratio (ICER) of the dengue vaccine. 
+--
+
+Based on this information, what would you recommend? 
+
+### &lt;center&gt; [Poll](https://www.mentimeter.com/app/presentation/alxz84p1turvk4y3ayhceautkeqck39e/3dkxhvgj5auy)
+
+&lt;/center&gt;
+
+--
+
+`$$\Delta Cost \text{ per person} = (20*3 + 100*0.02*0.4) - (0 + 100*0.02) = 58.8$$`
+--
+
+`$$\Delta QALY \text{ per person} = 2\%*0.035*0.6 = 0.00042$$`
+--
+
+`$$ICER = \frac{58.8}{0.00042} = 140,000$$`
+
+What does this number tell us? Is it worthwhile to deploy the vaccine to control dengue?
+
 ---
 # Decision rule (Threshold)
+.pull-left[
+
+&lt;image src="libs/pic/Drules.png" width = "100%" &gt;
+
+]
+
+.pull-right[
+
+`$$ICER = \frac{\Delta Cost}{\Delta \text{QALYs or DALYs}}$$`
+The most commonly used threshholds are
+
+- 1 times GDP per capita: .red[very] cost-effective
+
+- 3 times GDP per capita: Cost-effective
+
+My threshold is 1.5 GDP per capita. 
+
+Willingness to pay
+
+]
 
 ---
-# QALY league tables and the planning process
-
----
-# Sensitivity analysis (varying key uncertain parameters for the model)
+# Sensitivity analysis (varying key uncertain parameters in the model and repeat the analysis)
 
 key parameters may include 
 
@@ -246,13 +315,13 @@ key parameters may include
   - utility measures (quality of life or disability weight)
   
   - discount rate
+  
 ---
 # Cost-benefit analysis 
 
 ### The effectiveness is measured in monetary terms (e.g., USD)
 
----
-# How to convert utility measures into the monetary term
+### How to convert utility measures into the monetary term
 
 - Willingness to pay
 
@@ -335,6 +404,8 @@ class: inverse middle center
 ---
 # Questions
 
+.pull-left[
+
 1. What is the main purpose of the study? 
 
 2. What is the main intervention? 
@@ -346,6 +417,12 @@ class: inverse middle center
 5. What are the cost-effectiveness ratio?
 
 6. What is the conclusion of the paper? 
+]
+
+.pull-right[
+
+&lt;image src="libs/pic/pbf.png" width = "100%"&gt;
+]
 
 ---
 class: middle, center, inverse
